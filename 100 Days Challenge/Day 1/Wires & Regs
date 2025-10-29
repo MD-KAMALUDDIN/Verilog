@@ -1,0 +1,14 @@
+module main;
+    reg a;        
+    wire b;       
+
+    assign b = a; 
+
+    initial begin
+        a = 0;
+        $display("a=%b, b=%b", a, b);
+        a = 1;
+        #1; 
+        $display("a=%b, b=%b", a, b);
+    end
+endmodule
