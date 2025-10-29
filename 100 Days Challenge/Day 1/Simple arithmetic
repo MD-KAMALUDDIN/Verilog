@@ -1,0 +1,11 @@
+module main;
+    reg [3:0] x = 5;
+    reg [3:0] y = 3;
+    wire [3:0] z;
+
+    assign z = x + y;
+
+    initial begin
+        $display("x=%d, y=%d, x+y=%d", x, y, z);
+    end
+endmodule
