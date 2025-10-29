@@ -1,0 +1,11 @@
+module main;
+    reg [3:0] vec1 = 4'b1010;
+    reg [3:0] vec2 = 4'b0101;
+    wire [3:0] sum;
+
+    assign sum = vec1 + vec2;
+
+    initial begin
+        $display("vec1=%b, vec2=%b, sum=%b", vec1, vec2, sum);
+    end
+endmodule
