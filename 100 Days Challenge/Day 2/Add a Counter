@@ -1,0 +1,19 @@
+module counter_demo;
+    reg clk;
+    reg [3:0] count;
+
+    
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    
+    always @(posedge clk) begin
+        count <= count + 1;
+    end
+
+    initial begin
+        count = 0;
+        $monitor("time=%0t | clk=%b | count=%d", $time, clk, count);
+        #60 $finish;
+    end
+endmodule
